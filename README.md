@@ -6,23 +6,23 @@ GoS3 is a golang library for uploading and deleting objects on S3 buckets using 
 
 ## Install
 
-```
+```sh
 go get github.com/animber-coder/gos3
 ```
 
 ## Example
 
-```
+```go
 testTxt, _ := os.Open("test.txt")
 defer testTxt.Close()
 
 s3 := gos3.New(Region, AWSAccessKey, AWSSecretKey)
 err := s3.FileUpload(gos3.UploadInput{
-	Bucket:      "zerodha-testbucket",
-	ObjectKey:   "test.txt",
-	ContentType: "text/plain",
-	FileName:    "test.txt",
-	Body:        testTxt,
+    Bucket:      "zerodha-testbucket",
+    ObjectKey:   "test.txt",
+    ContentType: "text/plain",
+    FileName:    "test.txt",
+    Body:        testTxt,
 }
 ```
 
@@ -41,4 +41,3 @@ ToDo.
 ## License
 
 MIT.
-
