@@ -36,13 +36,13 @@ resp, err := s3.FileUpload(gos3.UploadInput{
     ContentType: "text/plain",
     FileName:    "test.txt",
     Body:        testTxt,
-}
+})
 
 // Similarly, Files can be deleted.
 err := s3.FileDelete(gos3.DeleteInput{
     Bucket:    os.Getenv("AWS_S3_BUCKET"),
     ObjectKey: "test.txt",
-}
+})
 
 // You can also use this library to generate
 // Presigned URLs that can for eg. be used to
