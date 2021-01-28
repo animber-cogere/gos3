@@ -24,7 +24,7 @@ defer testTxt.Close()
 s3 := gos3.New(Region, AWSAccessKey, AWSSecretKey)
 // or you can use this on an EC2 instance to 
 // obtain credentials from IAM attached to the instance.
-s3 := gos3.NewUsingIAM(Region)
+s3, _ := gos3.NewUsingIAM(Region)
 
 // You can also set a custom endpoint to a compatible s3 instance. 
 s3.SetEndpoint(CustomEndpoint)
