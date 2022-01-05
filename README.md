@@ -2,8 +2,8 @@
 
 ## Overview [![GoDoc](https://godoc.org/github.com/animber-coder/gos3?status.svg)](https://godoc.org/github.com/animber-coder/gos3) [![Go Report Card](https://goreportcard.com/badge/github.com/animber-coder/gos3)](https://goreportcard.com/report/github.com/animber-coder/gos3) [![GoCover](https://gocover.io/_badge/github.com/animber-coder/gos3)](https://gocover.io/_badge/github.com/animber-coder/gos3) [![Zerodha Tech](https://zerodha.tech/static/images/github-badge.svg)](https://zerodha.tech) 
 
-GoS3 is a golang library for uploading and deleting objects 
-on S3 buckets using REST API calls or Presigned URLs signed 
+GoS3 is a Go library for manipulating objects 
+in S3 buckets using REST API calls or Presigned URLs signed 
 using AWS Signature Version 4.
 
 ## Install
@@ -54,6 +54,7 @@ file, _ := s3.FileDownload(gos3.DownloadInput{
     Bucket:    AWSBucket,
     ObjectKey: "test.txt",
 })
+
 data, _ := ioutil.ReadAll(file)
 file.Close()
 
